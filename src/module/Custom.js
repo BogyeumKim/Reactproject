@@ -1,44 +1,57 @@
 import React from 'react';
+import TableRow from '@material-ui/core/TableRow';
+import TableCell from '@material-ui/core/TableCell';
 
 class Custom extends React.Component{
     render(){
         return(
+            <TableRow>
+                <TableCell> <img src={this.props.image} alt="profile"/></TableCell>
+                <TableCell>{this.props.name}</TableCell>
+                <TableCell>{this.props.id}</TableCell>
+                <TableCell>{this.props.email}</TableCell>
+                <TableCell>{this.props.job}</TableCell>
 
-        <div>
+
+            </TableRow>
+
+
+
+        // <div>
             
-            <CustomProfile id={this.props.id} image={this.props.image} name={this.props.name}/>
-            <CustomInfo email={this.props.email} job={this.props.job}/>
-        </div>
+        //     <CustomProfile id={this.props.id} image={this.props.image} name={this.props.name}/>
+        //     <CustomInfo email={this.props.email} job={this.props.job}/>
+        // </div>
         )
 
     }
 }
 
 
-class CustomProfile extends React.Component{
-    render(){
-        return(
-        <div>
-            <img src={this.props.image} alt="profile"/>
-            <h2>{this.props.name}({this.props.id})</h2>
+// class CustomProfile extends React.Component{
+//     render(){
+//         return(
+//         <div>
+//             <img src={this.props.image} alt="profile"/>
+//             <h2>{this.props.name}({this.props.id})</h2>
 
-        </div>
-        )
-    }
-}
+//         </div>
+//         )
+//     }
+// }
 
 
-class CustomInfo extends React.Component{
-    render(){
-        return(
-            <div>
-            <p>{this.props.email}</p>
-            <p>{this.props.job}</p>
+// class CustomInfo extends React.Component{
+//     render(){
+//         return(
+//             <div>
+//             <p>{this.props.email}</p>
+//             <p>{this.props.job}</p>
 
-            </div>
-        )
-    }
-}
+//             </div>
+//         )
+//     }
+// }
 
 
 
